@@ -1,67 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAP Garland, LLC</title>
+  <title>Mada Air OU</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
-    }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #e6f4ff; color: #222; }
     header {
-      background-color: #003366;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h1, h2 {
+      background: #87ceeb;
       color: #003366;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 4px solid #1e90ff;
     }
-    .contact {
-      background: #fff;
-      padding: 20px;
-      border-left: 5px solid #003366;
-      margin-top: 30px;
+    header h1 { margin: 0; font-size: 2.8em; }
+    header p { margin-top: 10px; font-size: 1em; color: #003366; }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+      animation: fadeSlide 3s ease-in-out infinite alternate;
+    }
+    .img-card {
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.5s;
+    }
+    .img-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .img-card:hover img {
+      transform: scale(1.1);
+    }
+    .banner {
+      text-align: center;
+      font-size: 3em;
+      padding: 80px 20px;
+      color: #1e3a5f;
+      background: linear-gradient(135deg, #b3e5fc, #e1f5fe);
+      animation: pulse 4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    @keyframes fadeSlide {
+      0% { opacity: 0.8; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
     footer {
-      background-color: #003366;
+      background: #1e3a5f;
       color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 50px;
+      padding: 30px;
+      font-size: 0.95em;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>CAP Garland, LLC</h1>
-    <p>Private Investment Fund</p>
+    <h1>Mada Air OU</h1>
+    <p>18a Haapsalu, 90502 Estonia | contact@madaairou.space | +37258260643</p>
   </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>CAP Garland, LLC is a Washington-based private investment fund focused on delivering value through diversified investment strategies.</p>
+  <div class="banner">
+    Empowering Air & Innovation
+  </div>
 
-    <h2>Contact</h2>
-    <div class="contact">
-      <p><strong>Address:</strong> 915 W 2nd Ave, Spokane, WA 99201</p>
-      <p><strong>Email:</strong> <a href="mailto:ryanberg@capgarland.shop">ryanberg@capgarland.shop</a></p>
-      <p><strong>Phone:</strong> (509) 822-3850</p>
+  <div class="gallery">
+    <div class="img-card">
+      <img src="https://emerging-europe.com/wp-content/uploads/2017/12/bigstock-178089721.jpg" alt="Air Tech 1">
     </div>
-  </section>
+    <div class="img-card">
+      <img src="https://www.constructionbusinessowner.com/sites/default/files/main_image/restart.jpeg" alt="Construction Site">
+    </div>
+    <div class="img-card">
+      <img src="https://www.gov.kz/uploads/2021/6/7/1f44af1eb490edb4caa62579e2ce6ba8_original.103450.jpeg" alt="Logistics">
+    </div>
+    <div class="img-card">
+      <img src="https://www.long-intl.com/wp-content/uploads/2021/05/Clients-page-alternator-Insurance-Firms.jpg" alt="Corporate">
+    </div>
+    <div class="img-card">
+      <img src="https://img.freepik.com/premium-photo/innovative-architecture-civil-engineering-plan_31965-4427.jpg" alt="Innovation">
+    </div>
+  </div>
 
   <footer>
-    &copy; 2025 CAP Garland, LLC. All rights reserved.
+    <p>© 2025 Mada Air OU. All rights reserved.</p>
   </footer>
 </body>
 </html>
